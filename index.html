@@ -5,8 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PH-Bank-project</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <h1 class="">welcome to PH bank project</h1>
+    <header>
+      <h1 class="text-5xl text-center mt-6">
+        Welcome to your bank
+        <span class="font-semibold text-violet-600"> PH Project </span>
+      </h1>
+    </header>
+
+    <main>
+      <section class="bg-blue-100 w-9/12 mx-auto p-8">
+        <h3 class="text-3xl mb-4">Please login</h3>
+        <div>
+          <input
+            id="email"
+            class="w-9/12 block mb-2 px-3 py-4"
+            type="email"
+            placeholder="please enter your email"
+          />
+          <input
+            id="password"
+            class="w-9/12 block mb-2 px-3 py-4"
+            type="password"
+            placeholder="please enter your password"
+          />
+        </div>
+        <button
+          id="btn-submit"
+          class="bg-amber-600 hover:bg-sky-600 px-8 py-4 text-white font-medium rounded-lg"
+        >
+          Submit
+        </button>
+      </section>
+    </main>
   </body>
 </html>

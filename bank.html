@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="deposit.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-6">
+        welcome to money project
+        <span class="font-semibold text-violet-600"> PH Project </span>
+      </h1>
+    </header>
+
+    <main>
+      <section>
+        <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto my-8">
+          <div class="bg-green-600 p-8 rounded-xl">
+            <h4 class="text-2xl">Deposit</h4>
+            <h4 class="text-2xl" id="deposit-amount">$00</h4>
+          </div>
+
+          <div class="bg-yellow-600 p-8 rounded-xl">
+            <h4 class="text-2xl">withdraw</h4>
+            <h4 class="text-2xl" id="withdraw-amount">$00</h4>
+          </div>
+
+          <div class="bg-violet-600 p-8 rounded-xl">
+            <h4 class="text-2xl">Balance</h4>
+            <h4 class="text-2xl" id="balance-amount">$00</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto my-8">
+          <div class="bg-fuchsia-600 p-8 rounded-xl">
+            <h4 class="text-2xl">Please deposit</h4>
+            <!-- <h4 class="text-2xl">$00</h4> -->
+            <input
+              id="deposit"
+              class="w-9/12 block mb-2 px-3 py-4"
+              type="number"
+              placeholder="amount deposit"
+            />
+            <button
+              id="btn-deposit"
+              class="bg-amber-600 hover:bg-sky-600 px-8 py-4 text-white font-medium rounded-lg"
+            >
+              Deposit
+            </button>
+          </div>
+
+          <div class="bg-sky-300 p-8 rounded-xl">
+            <h4 class="text-2xl">Please withdraw</h4>
+            <!-- <h4 class="text-2xl">$00</h4> -->
+            <input
+              id="withdraw"
+              class="w-9/12 block mb-2 px-3 py-4"
+              type="number"
+              placeholder="amount withdraw"
+            />
+            <button
+              id="btn-withdraw"
+              class="bg-amber-600 hover:bg-sky-600 px-8 py-4 text-white font-medium rounded-lg"
+            >
+              withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
