@@ -6,6 +6,7 @@ const depositBtnEl = document.getElementById('btn-deposit'),
 let depositAmountEl = document.getElementById('deposit-amount'),
   balanceAmountEl = document.getElementById('balance-amount'),
   withdrawAmountEl = document.getElementById('withdraw-amount');
+
 let totalDeposit = 0;
 
 depositBtnEl.addEventListener('click', () => {

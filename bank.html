@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money website</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="deposit.js" defer></script>
+    <!-- <script src="deposit.js" defer></script> -->
+    <script src="depositTwo.js" defer></script>
   </head>
   <body>
     <header>
@@ -20,7 +21,10 @@
         <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto my-8">
           <div class="bg-green-600 p-8 rounded-xl">
             <h4 class="text-2xl">Deposit</h4>
-            <h4 class="text-2xl" id="deposit-amount">$00</h4>
+            <h4 class="text-2xl">
+              $
+              <span id="deposit-amount">00</span>
+            </h4>
           </div>
 
           <div class="bg-yellow-600 p-8 rounded-xl">
