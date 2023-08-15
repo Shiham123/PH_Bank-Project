@@ -1,25 +1,43 @@
-const depositBtnEl = document.getElementById('btn-deposit');
-const depositInputEl = document.getElementById('deposit');
+const depositBtnEl = document.getElementById('btn-deposit'),
+  withdrawBtnEl = document.getElementById('btn-withdraw'),
+  depositInputEl = document.getElementById('deposit'),
+  withdrawInputEl = document.getElementById('withdraw');
 
-let depositAmountEl = document.getElementById('deposit-amount');
-let balanceAmountEl = document.getElementById('balance-amount');
+let depositAmountEl = document.getElementById('deposit-amount'),
+  balanceAmountEl = document.getElementById('balance-amount'),
+  withdrawAmountEl = document.getElementById('withdraw-amount');
+let totalDeposit = 0;
 
 depositBtnEl.addEventListener('click', () => {
   depositUpdate();
   balanceUpdate();
 });
 
+withdrawBtnEl.addEventListener('click', () => {
+  withdrawUpdate();
+});
+
 function balanceUpdate() {
-  let previousDeposit = parseFloat(depositAmountEl.innerText.replace('$', ''));
-  balanceAmountEl.innerText = '$' + previousDeposit;
+  balanceAmountEl.innerText = '$' + totalDeposit.toFixed(2);
 }
 
 function depositUpdate() {
   let newDeposit = parseFloat(depositInputEl.value);
-  let previousDeposit = parseFloat(depositAmountEl.innerText.replace('$', ''));
-
-  let totalDeposit = previousDeposit + newDeposit;
-
+  totalDeposit += newDeposit;
   depositAmountEl.innerText = '$' + totalDeposit.toFixed(2);
   depositInputEl.value = '';
+}
+
+function withdrawUpdate() {
+  let withdraw = parseFloat(withdrawInputEl.value);
+
+  if (withdraw <= totalDeposit) {
+    totalDeposit -= withdraw;
+    withdrawAmountEl.innerText = '$' + withdraw.toFixed(2);
+    balanceUpdate();
+  } else {
+    alert('Insufficient balance for withdrawal.');
+  }
+
+  withdrawInputEl.value = '';
 }
